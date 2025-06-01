@@ -1,51 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jimi The Cat - Memecoin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-0zUjWQzN+9A3HkZZK5h8RmeM+2PyemKn0Pg4dZMH6zk+3P7vS6DJTgR8+cr7+fHpXo88H6hz+uk1p+u9zL1KwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jimi The Cat - Memecoin</title>
+
+  <!-- Bootstrap 5 CSS only once -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Rye&family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 5 (latest) only once -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>JIMI THE CAT</h1>
-            <p>The most elite gamer cat in the universe. Join the revolution with the ultimate memecoin.</p>
-            <img src="./img/jimi1.jpg" alt="Jimi the Cat" />
-            <button class="btn btn-launch mt-4">Join the Mission</button>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Jimi The Cat</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#buy">Buy Token</a></li>
+            <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </nav>
+  </header>
 
-    <section class="gallery">
-        <h2>MEET JIMI IN ACTION</h2>
-        <div class="gallery-grid">
-            <img src="./img/jimi2.jpg" alt="Jimi Masked 1" />
-            <img src="./img/jimi3.jpg" alt="Jimi Masked 2" />
-            <img src="./img/jimi1.jpg" alt="Jimi Unmasked" />
-        </div>
-    </section>
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Jimi The Cat</h1>
+      <p class="hero-subtitle">
+        The most elite gamer cat in the universe. Join the revolution with the ultimate memecoin.
+      </p>
+      <img src="./img/jimi1.jpg" alt="Jimi the Cat" class="hero-image" />
+      <div class="hero-buttons">
+        <button class="btn btn-primary btn-lg">Join the Mission</button>
+        <a href="#contract" class="btn btn-outline-info btn-lg ms-3">Contract</a>
+      </div>
+    </div>
+  </section>
 
-    <section class="contract-info">
-        <p><strong>Contract Address:</strong></p>
-        <div class="copy-box" id="copyContract" onclick="copyContractText()">Aa9cVMUubsLM1GLUyEPVCrF5v2WKiRyVKP6ke7Gqpump</div>
-        <p style="font-size: 0.7rem; color: #888; margin-top: 0.7rem;">Click to copy</p>
-    </section>
+  <section class="about-section py-5" id="about">
+    <div class="container">
+      <h2>About Jimi The Cat</h2>
+      <p>
+        Jimi the Cat isn't just any feline; he's a digital legend, a master of gaming, and now, the face of the ultimate memecoin. Born
+        from the depths of the internet's most entertaining corners, Jimi embodies the spirit of fun, community, and a touch of chaotic
+        brilliance. This token aims to bring together meme enthusiasts and crypto aficionados in a purr-fectly engaging ecosystem. Get
+        ready to experience the memeverse with Jimi!
+      </p>
+    </div>
+  </section>
 
-    <section class="social-links">
-        <h2>JOIN THE COMMUNITY</h2>
-        <div class="social-links-container">
-            <a href="https://x.com/shitkickercoin?t=2preBASTQCMdVbCyRejtOA&s=09" class="btn btn-social mx-2" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter fa-lg"></i> Twitter / X</a>
-            <a href="YOUR_TIKTOK_LINK_HERE" class="btn btn-social mx-2" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok fa-lg"></i> TikTok</a>
-            </div>
-    </section>
+  <section class="buy-token-section py-5" id="buy">
+    <div class="container text-center">
+      <h2>Get Your $JCAT</h2>
+      <p>Ready to join the Jimi The Cat revolution? $JCAT will be available for purchase/minting on the following platforms:</p>
+      <div class="buy-options mt-3">
+        <a href="#" class="btn btn-success btn-lg me-3">Buy on DEX 1</a>
+        <a href="#" class="btn btn-warning btn-lg">Buy on DEX 2</a>
+        <p class="mt-3 text-muted">
+          Stay tuned for official announcements and contract address verifications on our social media channels!
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        © 2025 Jimi The Cat Official. All Rights Reserved.
-    </footer>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <section class="gallery py-5" id="gallery">
+    <div class="container">
+      <h2>MEET JIMI IN ACTION</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col"><img src="./img/jimi2.jpg" alt="Jimi Masked 1" class="img-fluid rounded" /></div>
+        <div class="col"><img src="./img/jimi3.jpg" alt="Jimi Masked 2" class="img-fluid rounded" /></div>
+        <div class="col"><img src="./img/jimi1.jpg" alt="Jimi Unmasked" class="img-fluid rounded" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contract-info py-5 bg-light" id="contract">
+    <div class="container text-center">
+      <h2>Contract</h2>
+      <p><strong>Contract Address:</strong></p>
+      <div class="copy-box" id="copyContract" onclick="copyContractText()">Aa9cVMUubsLM1GLUyEPVCrF5v2WKiRyVKP6ke7Gqpump</div>
+      <p class="mt-2" style="font-size: 0.8rem; color: #888;">Click to copy</p>
+    </div>
+  </section>
+
+  <section class="community" id="community">
+    <div class="container">
+      <h2>Join Our Community</h2>
+      <p>Follow us on your favorite platforms</p>
+      <div class="social-links-bottom">
+    
+        <a href="https://x.com/i/communities/1928995959947833403" target="_blank" class="social-icon" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.tiktok.com/@rvldisy" target="_blank" class="social-icon" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-3 bg-dark text-center text-white">© 2025 Jimi The Cat Official. All Rights Reserved.</footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
