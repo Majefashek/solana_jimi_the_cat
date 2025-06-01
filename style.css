@@ -1,0 +1,193 @@
+body {
+    background-color: #121212; /* Darker background for a more modern feel */
+    color: #e0e0e0; /* Lighter text for better contrast */
+    font-family: 'Press Start 2P', cursive;
+    overflow-x: hidden;
+    line-height: 1.6; /* Improved readability */
+}
+.hero {
+    height: 100vh;
+    background: radial-gradient(circle at center, #1e1e1e 0%, #121212 100%); /* Slightly less intense gradient */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative; /* For potential background image overlay */
+    overflow: hidden; /* Clip background image */
+}
+/* Optional: Subtle background animation */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('./img/jimi_pattern.png') repeat; /* Replace with a subtle pattern */
+    opacity: 0.1;
+    animation: subtleRotate 30s linear infinite;
+    background-size: auto 20%;
+}
+@keyframes subtleRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.hero-content {
+    position: relative; /* Ensure content is above the background overlay */
+    z-index: 10;
+}
+.hero h1 {
+    font-size: 2.5rem; /* Slightly larger title */
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-in-out;
+    text-shadow: 2px 2px 4px #000; /* Add a subtle text shadow */
+}
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    animation: fadeInUp 1.2s ease-in-out 0.2s; /* Slight delay for the paragraph */
+    color: #ccc; /* Slightly softer white */
+}
+.hero img {
+    max-width: 350px; /* Slightly larger image */
+    border: 4px solid #00ffff; /* Cyan border */
+    border-radius: 20px; /* Slightly more rounded */
+    box-shadow: 0 0 60px #00ffff; /* More intense shadow */
+    animation: pulse 2.2s infinite alternate; /* Adjusted animation timing and direction */
+}
+.btn-launch {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    background: #00ffff; /* Cyan background */
+    color: #121212; /* Dark text on cyan */
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    font-weight: bold; /* Make the button text bold */
+}
+.btn-launch:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.9);
+}
+.gallery {
+    padding: 5rem 2rem;
+    background-color: #1e1e1e; /* Slightly lighter dark background */
+    text-align: center;
+}
+.gallery h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #00ffff;
+    text-shadow: 1px 1px 2px #000;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    padding: 2rem;
+}
+.gallery img {
+    width: 100%; /* Images fill their grid cell */
+    border-radius: 16px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    box-shadow: 0 0 30px #00ffff;
+    cursor: pointer; /* Indicate clickability */
+}
+.gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 50px #00ffff;
+}
+.contract-info {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #121212;
+}
+.contract-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+.copy-box {
+    display: inline-block;
+    background: #1e1e1e;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 30px #00ffff;
+    cursor: pointer;
+    user-select: all;
+    position: relative;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem; /* Improved readability of contract address */
+}
+.copy-box.copied::after {
+    content: 'Copied!';
+    position: absolute;
+    top: -1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00ffff;
+    color: #121212;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    animation: fadeInOut 1.5s ease-in-out; /* Faster feedback */
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.social-links {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #1e1e1e;
+}
+.social-links h2 {
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    color: #00ffff;
+    text-shadow: 1px 1px 2px #000;
+}
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Spacing between social media links */
+    align-items: center; /* Align items vertically in the container */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+.btn-social {
+    background-color: #121212;
+    color: #00ffff !important; /* Ensure text color is cyan */
+    border: 2px solid #00ffff;
+    border-radius: 12px;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+.btn-social:hover {
+    background-color: #00ffff;
+    color: #121212 !important;
+    transform: scale(1.05);
+}
+.btn-social i {
+    font-size: 1.5rem; /* Adjust icon size */
+}
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #121212;
+    color: #777;
+    font-size: 0.9rem;
+}
